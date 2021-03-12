@@ -58,6 +58,12 @@ The output:
 ./docs/commands/namer-full.md
 ```
 
+An example of namer.full.md:
+
+```markdown
+
+```
+
 As you can assume, all of the markdown files under `docs/commands` in this repository, generated automatically by `mdclick` command.
 Use them as a reference.
 
