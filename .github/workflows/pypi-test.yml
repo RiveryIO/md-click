@@ -1,0 +1,16 @@
+name: Publish Python distributions to PyPI and TestPyPI
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-n-publish:
+    name: Build and publish Python 🐍 distributions 📦 to PyPI and TestPyPI
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@main
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
