@@ -9,8 +9,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='md-click',
+    description="A command line tool for automatically generating .md files from click's CLI command.",
     author='Rivery',
-    version=__version__,
+    version="1.0.2",
     include_package_data=False,
     zip_safe=True,
     packages=find_packages(),
@@ -22,6 +23,7 @@ setup(
     url="https://github.com/RiveryIo/md-click",
     project_urls={
         "Bug Tracker": "https://github.com/RiveryIo/md-click/issues",
+        "Documentation": "https://riveryio.github.io/md-click"
     },
     install_requires=install_requires,
     entry_points="""
@@ -29,9 +31,11 @@ setup(
         mdclick=md_click.main:cli
     """,
     license_files=("LICENSE", ),
+    license="BSD 3.0",
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Topic :: Documentation",
+        "License :: OSI Approved :: BSD License",
         "Topic :: Software Development :: Documentation",
         "Topic :: Software Development :: Build Tools",
         "Topic :: Software Development :: Libraries :: Python Modules",
