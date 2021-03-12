@@ -1,13 +1,31 @@
+# Repository
 site_name: MD-Click
 repo_url: https://github.com/RiveryIo/md-click
 repo_name: RiveryIo/md-click
+site_url: https://github.com/RiveryIo/md-click
+edit_uri: edit/docs/docs
+
+# # Configuration
 theme:
   name: material
-  scheme: preference
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: deep orange
+
   icon:
     repo: fontawesome/brands/github
   features:
     - navigation.indexes
+    - navigation.sections
+
+# Copywright
+copyright: Copyright &copy; 2021 Rivery.io
+
+# Plugins
+plugins:
+  - minify:
+      minify_html: true
 
 nav:
   - Home: index.md
