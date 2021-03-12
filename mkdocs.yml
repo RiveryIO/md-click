@@ -1,2 +1,16 @@
 site_name: MD-Click
-theme: material
+repo_url: https://github.com/RiveryIo/md-click
+repo_name: RiveryIo/md-click
+theme:
+  name: material
+  scheme: preference
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.indexes
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Commands:
+    - dumps: commands/dumps.md
