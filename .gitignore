@@ -70,7 +70,6 @@ build/
 sandbox/*
 sandbox/
 .kube
-*.yaml
 *.sql
 *.DS_Store
 
