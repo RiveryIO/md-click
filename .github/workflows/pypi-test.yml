@@ -16,5 +16,5 @@ jobs:
         with:
           python-version: 3.8
       - name: Run Tests
-      - run: python -m unitests tests/
+      - run: python -m unitest tests/
 
