@@ -24,10 +24,10 @@ class TestCLI(TestCase):
         )
         assert resp.exit_code == 0, f'CLI failed. Response: {resp.stdout}'
 
-    # def tearDown(self) -> None:
-    #     """ Delete DOCS DIR """
-    #     docs_dir = pathlib.Path(DOCS_DIR)
-    #     for dir in docs_dir.parents:
-    #         if dir == pathlib.Path('.'):
-    #             continue
-    #         shutil.rmtree(dir, ignore_errors=True)
+    def tearDown(self) -> None:
+        """ Delete DOCS DIR """
+        docs_dir = pathlib.Path(DOCS_DIR)
+        for dir in docs_dir.parents:
+            if dir == pathlib.Path('.'):
+                continue
+            shutil.rmtree(dir, ignore_errors=True)
