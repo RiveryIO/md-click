@@ -31,7 +31,7 @@ def full_name(**kwargs):
 and we want to create a nice md files per each command, we'll run the next cli command:
 
 ```shell
-> mdclick dumps --baseModule=app.cli --baseCommand=main --docPath=./docs/commands
+> mdclick dumps --baseModule=app.cli --baseCommand=main --docsPath=./docs/commands
 ```
 
 The output:
