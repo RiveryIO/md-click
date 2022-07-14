@@ -1,6 +1,7 @@
-import click
-import pathlib
 import importlib
+import pathlib
+
+import click
 
 md_base_template = """
 # {command_name}
@@ -50,10 +51,10 @@ def dump_helper(base_command, docs_dir):
         options = {
             opt.name: {
                 "usage": '\n'.join(opt.opts),
-                "prompt": opt.prompt,
+                "prompt": None if type(opt) == click.core.Argument else opt.prompt,
                 "required": opt.required,
                 "default": opt.default,
-                "help": opt.help,
+                "help": None if type(opt) == click.core.Argument else opt.help,
                 "type": str(opt.type)
             }
             for opt in helpdct.get('params', [])
@@ -87,9 +88,11 @@ def dump_helper(base_command, docs_dir):
         with open(md_file_path, 'w') as md_file:
             md_file.write(md_template)
 
+
 @click.group()
 def cli():
     pass
+
 
 @cli.command('dumps')
 @click.option('--baseModule', help='The base command module path to import', required=True)
