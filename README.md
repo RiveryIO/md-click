@@ -5,7 +5,7 @@ MD-Click is a command line tool for creating `.md` files for any python's click 
 # The Problem
 
 After creating new CLI project using click, we couldn't found out any tool that generates automatic
-`.md` files documentation per each command. This is the reason we've create this quick and easy tool.
+`.md` files documentation per each command. This is the reason we've created this quick and easy tool.
 
 # The Solution
 
