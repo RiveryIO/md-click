@@ -50,11 +50,12 @@ def dump_helper(base_command, docs_dir):
         options = {
             opt.name: {
                 "usage": '\n'.join(opt.opts),
-                "prompt": opt.prompt,
-                "required": opt.required,
-                "default": opt.default,
-                "help": opt.help,
-                "type": str(opt.type)
+                "usage": '\n'.join(opt.opts),
+                "prompt": getattr(opt, "prompt", None),
+                "required": getattr(opt, "required", None),
+                "default": getattr(opt, "default", None),
+                "help": getattr(opt, "help", None),
+                "type": str(getattr(opt, "type", None))
             }
             for opt in helpdct.get('params', [])
         }
